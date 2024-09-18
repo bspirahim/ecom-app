@@ -1,4 +1,4 @@
-"use client"; // This ensures the component is rendered on the client
+"use client";
 
 import React, { useEffect } from "react";
 
@@ -8,14 +8,14 @@ interface BannerProps {
 
 const Banner: React.FC<BannerProps> = ({ data }) => {
   useEffect(() => {
-    console.log("client-side data:", data);
-  }, [data]); // Add data as a dependency
+    console.log("client", data);
+  }, [data]);
 
   return (
     <div className="text-center">
       <h1 className="text-2xl font-bold">Hello Ecom-App</h1>
-      <p>Data fetched server-side: {data}</p> {/* Display the fetched data */}
-      <p>Let's start your development process!</p>
+      <p>Data fetched server-side: {data}</p>
+      <p>Let&apos;s start your development process!</p> {/* Use &apos; for single quote */}
     </div>
   );
 };
